@@ -1,20 +1,32 @@
 #include<iostream>
 using namespace std;
 
+// void insertionSort(int a[],int n)
+// {
+//     int num,j;
+//     for(int i=0;i<n;i++)
+//     {
+//         num = a[i];
+//         for(j=i-1;j>=0 && a[j]>num; j--)
+//         {
+//             a[j+1] = a[j];
+//         }
+//         a[j+1]=num;
+//     }
+// }
 void insertionSort(int a[],int n)
 {
-    int num,j;
+    int j;
     for(int i=0;i<n;i++)
     {
-        num = a[i];
-        for(j=i-1;j>=0 && a[j]>num; j--)
+        j=i;
+        while(j>0 && a[j-1]>a[j])
         {
-            a[j+1] = a[j];
+            swap(a[j],a[j-1]);
+            j--;
         }
-        a[j+1]=num;
     }
 }
-
 int main()
 {
     int n;
