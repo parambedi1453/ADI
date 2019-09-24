@@ -1,3 +1,6 @@
+/*
+    complexity of binary tree traversals is O(n) because we need to visit each and every node
+*/
 #include<iostream>
 using namespace std;
 class Node
