@@ -46,11 +46,7 @@ void levelOrderUsingQueue(Node *root)
              q.push(curr->left);
              if(curr->right)
              q.push(curr->right);
-
-        
         }
-
-       
     }
 }
 int main()
