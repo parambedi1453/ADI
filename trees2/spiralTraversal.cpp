@@ -1,4 +1,5 @@
 #include<iostream>
+#include<stack>
 using namespace std;
 class Node
 {
@@ -15,8 +16,39 @@ class Node
 };
 void spiralPrintTree(Node *root)
 {
-    
+    if(root==NULL)return;
+
+    stack<Node*> s1,s2;
+    s1.push(root);
+    while(1)
+    {
+        if(s1.empty()&&s2.empty())
+        return;
+        while(!s1.empty())
+        {
+            Node *temp = s1.top();
+            if(temp->left)
+            s2.push(temp->left);
+            if(temp->right)
+            s2.push(temp->right);
+            cout<<temp->data<<" ";
+            s1.pop();
+        }
+        while(!s2.empty())
+        {
+            Node *temp = s2.top();
+            if(temp->right)
+            s1.push(temp->right);
+            if(temp->left)
+            s1.push(temp->left);
+
+            cout<<temp->data<<" ";
+
+            s2.pop();
+        }
+    }
 }
+
 int main()
 {
     Node *root = NULL;
