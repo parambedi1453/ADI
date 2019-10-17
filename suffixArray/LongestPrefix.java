@@ -26,8 +26,7 @@ public class LongestPrefix
     }
     public static void main(String args[])
     {
-       String a[] = {"paramveer", "parkk", 
-                               "pat", "paaaaaaaa"}; 
+       String a[] = {"paramveer", "parkk", "pat", "paaaaaaaa"}; 
         int n = a.length; 
         int len  = findMinLen(a,n);
         String prefix="";
