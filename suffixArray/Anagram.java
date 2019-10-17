@@ -12,8 +12,6 @@ public class Anagram
     {
         String arr[] = {"abb","bba","bat","tab","cab","crazy"};
 
-       
-
         //sorting individual string
         for(int i=0;i<arr.length;i++)
         {
