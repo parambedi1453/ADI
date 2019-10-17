@@ -54,6 +54,6 @@ public class LongestPrefix
                 System.exit(0);
             }
         }
-        System.out.println(prefix);
+        System.out.print(prefix);
     }
 }
