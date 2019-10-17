@@ -1,9 +1,10 @@
 #include<iostream>
-#include<queue>
+#include<vector>
+#include<bits/stdc++.h>
 using namespace std;
 int main()
 {
-    priority_queue<int> p;
+    priority_queue<int,vector<int>,greater<int> > p;
     int a[10] = {5,6,17,18,9,11};
 
     // Insert in priority queue
