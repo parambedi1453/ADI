@@ -65,7 +65,8 @@ int main()
     }
     else
     {
-        cout<<ans<<endl;
+        cout<<"overlapping string is "<<ans<<endl;
+        cout<<"lenght of striing is = "<<ans.length()<<endl;
     }
     
 }
