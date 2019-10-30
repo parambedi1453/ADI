@@ -1,3 +1,33 @@
+/*
+    Given weights and values of N items, we need to put these items in a knapsack of capacity W to get the maximum total value in the knapsack.
+Note: Unlike 0/1 knapsack, you are allowed to bread the item.
+
+Input:
+First line consists of an integer T denoting the number of test cases. First line consists of two integers N and W, denoting number of items and weight respectively. Second line of every test case consists of 2*N spaced integers denoting Values and weight respectively. (Value1 Weight1 Value2 Weight2.... ValueN WeightN)
+
+Output:
+Print the maximum value possible to put items in a knapsack, upto 2 decimal place.
+
+Constraints:
+1 <= T <= 100
+1 <= N <= 100
+1 <= W <= 100
+
+Example:
+Input:
+2
+3 50
+60 10 100 20 120 30
+2 50
+60 10 100 20
+
+Output:
+240.00
+160.00
+
+Explanation:
+Testcase 1: Total maximum value of item we can have is 240.00 from the given capacity of sack.
+*/
 #include <iostream>
 #include<algorithm>
 #include<iomanip>
