@@ -6,7 +6,14 @@
 #define prime 119
 using namespace std;
 
+/*
 
+    creating hash for eg abc
+    65*pow(119,0)+66*pow(119,1)+67*pow(119,2);
+
+    pow will have exponent till pattern.length()-1;
+*/
+// complexity of the createHashValue is o(n)
 ll createHashValue(string str,int n)
 {
     ll ans = 0;
@@ -16,6 +23,16 @@ ll createHashValue(string str,int n)
     }
     return ans;
 }
+/*
+
+    calculateinh rolling hash 
+    abcd 
+    oldHash has value of abc
+    remove a by oldhash - 'a' 
+    devide whole oldHash by prime 
+    add d*pow(prime,pat.length()-1);
+*/
+// complexity of rolling hash function is o(1) because 3 constant opeations are being performed
 ll rollingHash(string str,int oldIndex,int newIndex,ll oldHashVal,int patlength)
 {
     ll newHash = oldHashVal-str[oldIndex];
@@ -42,8 +59,10 @@ bool checkStrings(string str1,int s1,int e1,string str2,int s2,int e2)
 int main()
 {
     string str,pat;
-    cin>>str;
-    cin>>pat;
+    cout<<"Enter String =\n";
+    cin>>str;//ababcabdab
+    cout<<"Enter pattern =\n";
+    cin>>pat;//abd
 
     ll strhash = createHashValue(str,pat.length());
     ll pathash = createHashValue(pat,pat.length());
