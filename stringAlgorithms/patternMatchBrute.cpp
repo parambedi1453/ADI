@@ -20,7 +20,9 @@ void patternMatching(string str,string ptr)
 int main()
 {
     string str,ptrn;
+    cout<<"Enter String =\n";
     cin>>str;
+    cout<<"Enter Pattern to be matched =\n";
     cin>>ptrn;
 
     patternMatching(str,ptrn);
