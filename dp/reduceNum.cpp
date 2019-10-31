@@ -46,14 +46,43 @@ int reduceNumMemo(int n)
 
 }
 
+int bottomUp(int n)
+{
+    int dp[10000];
+    dp[0]=0;
+    dp[1]=0;
+    dp[2]=1;
+    dp[3]=1;
+    for(int currNum = 4;currNum<=n;++currNum)
+    {
+        int a1 = INT8_MAX;
+        int a2 = INT8_MAX;
+        int a3 = INT8_MAX;
+        if(currNum%3 == 0) 
+        a1=1+dp[currNum/3];
+        if(currNum%2 == 0) 
+        a2=1+dp[currNum/2];
+
+        a3 = 1+dp[currNum-1];
+
+        dp[currNum] = min(a1,min(a2,a3));
+    }
+    return dp[n];
+}
 
 int main()
 {
     int n;
     cin>>n;
+    // Simple recursive approch
     // int ans = reduceNum(n);
+
+    // Memeoised approach
     for(int i=0;i<10000;i++)
     memo[i]=-1;
-    int ans = reduceNumMemo(n);
+    int ans1 = reduceNumMemo(n);
+    cout<<ans1<<endl;
+
+    int ans  = bottomUp(n);
     cout<<ans<<endl;
 }
