@@ -62,8 +62,6 @@ int minJump(int a[],int n)
         }
        
     }
-    
-    
     return b[0];
 }
 int main() {
